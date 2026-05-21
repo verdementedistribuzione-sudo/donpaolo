@@ -1,0 +1,34 @@
+{
+  "name": "emmaus-ai",
+  "version": "0.1.0",
+  "description": "Assistente spirituale cristiano AI",
+  "private": true,
+  "workspaces": [
+    "apps/backend",
+    "apps/frontend",
+    "apps/whatsapp-bot",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,md}\"",
+    "type-check": "turbo run type-check",
+    "db:migrate": "cd packages/supabase && npm run migrate",
+    "db:reset": "cd packages/supabase && npm run reset"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0",
+    "turbo": "^1.10.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
